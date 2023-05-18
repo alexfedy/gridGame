@@ -120,6 +120,7 @@ input[type="checkbox"]{
     transform: scale(1.05);
 }
 
+
 #time_val{
     font-size: 20px;
 }
@@ -127,5 +128,18 @@ input[type="checkbox"]{
 @media only screen and (max-width: 800px){
     .popup{
         width: 75%;
+    }
+    .grid-item{
+        background: grey;
+        border: 1px solid #2A2B2E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .grid-item:hover{
+        border: 1px solid #2A2B2E;
+        transform: scale(1);
     }
 }
