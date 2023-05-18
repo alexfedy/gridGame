@@ -1,0 +1,131 @@
+:root{
+    --green: #23C552;
+    --red: #F84F31;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position:relative;
+    background-color: #2A2B2E;
+    overflow: hidden;
+}
+
+#overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+#refresh_page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    padding: 10px;
+    z-index: 10;
+    background-color: transparent; 
+    border: 2px solid white;
+    color: white;
+    opacity: 0.5;
+    transition: all 0.2s ease;
+}
+
+#refresh_page:hover{
+    opacity: 1;
+}
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: fit-content;
+    width: 25%;
+    background-color: rgba(255,255,255,1);
+    color: black;
+    display: none;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 10;
+    padding: 30px;
+}
+
+.popup > h1{
+    font-size: 2rem;
+}
+
+.btn{
+    /* padding: 17px 40px; */
+    padding: 5% 10%;
+    border-radius: 50px;
+    border: 1px solid var(--green);
+    letter-spacing: 3px;
+    background-color: var(--green);
+    color: hsl(0, 0%, 100%);
+    box-shadow: var(--green);
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .05s ease;
+}
+
+.radio_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    margin: 30px 0;
+}
+
+input[type="checkbox"]{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.grid-container{
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-item{
+    background: grey;
+    border: 1px solid #2A2B2E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.grid-item:hover{
+    border: 2px solid white;
+    transform: scale(1.05);
+}
+
+#time_val{
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 800px){
+    .popup{
+        width: 75%;
+    }
+}
